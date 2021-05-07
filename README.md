@@ -1,6 +1,4 @@
-# ✨ dc-action-lab ✨
-
-<img src="https://themes.stackbit.com/images/diy-demo-1024x768.png" width="600">
+# ✨ DC Action Lab ✨
 
 This is a [Next.js](https://nextjs.org) site using [Sanity](https://www.sanity.io) as a [CMS](https://en.wikipedia.org/wiki/Content_management_system). It was created with [Stackbit](https://www.stackbit.com?utm_source=project-readme&utm_medium=referral&utm_campaign=user_themes) in under a minute.
 
@@ -63,8 +61,6 @@ You may be required to login with the Sanity CLI.
 To start editing your site, you can use the Sanity interface at https://dc-action-lab-54b0c.sanity.studio/.
 
 Alternatively, you can use the free on-page editing experience provided by the [Stackbit Studio](https://stackbit.com?utm_source=project-readme&utm_medium=referral&utm_campaign=user_themes).
-
-[![](https://i3.ytimg.com/vi/zd9lGRLVDm4/hqdefault.jpg)](https://stackbit.link/project-readme-lead-video)
 
 Here's a few resources to get you started:
 
