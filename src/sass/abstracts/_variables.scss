@@ -8,9 +8,9 @@ $theme-styles: (
 			sans-serif: ('Open Sans', Lato, sans-serif)
 		),
 		colors: (
-			blue:  #7076f0,
-			green: #29cf7f,
-			red:   #f36763
+			blue:  #194350,
+			green: #9DBEB9,
+			red:   #FF8882
 		)
 	),
 	bold: (
@@ -19,8 +19,8 @@ $theme-styles: (
 			sans-serif: ('Poppins', 'Helvetica Neue', Helvetica, 'Roboto', sans-serif)
 		),
 		colors: (
-			blue:  #2859da,
-			green: #01be54,
+			blue:  #194350,
+			green: #9DBEB9,
 			red:   #ec5033
 		)
 	),
@@ -30,8 +30,8 @@ $theme-styles: (
 			sans-serif: ('IBM Plex Sans','Helvetica Neue', Helvetica, 'Roboto', sans-serif)
 		),
 		colors: (
-			blue:   #0084ff,
-			green:  #00cc88,
+			blue:   #194350,
+			green:  #9DBEB9,
 			red:    #ff3366
 		)
 	)
@@ -47,7 +47,7 @@ $font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","
 $color-primary:                        #FF7245 !default;
 
 // Base
-$color-body-text:                      #2c343c !default;
+$color-body-text:                      #14343E !default;
 $color-meta:                           #8696a6 !default;
 $color-body-bg:                        #fff !default;
 
