@@ -25,7 +25,7 @@ export default class HeroSection extends React.Component {
         if ((((_.get(section, 'title', null) || _.get(section, 'subtitle', null)) || _.get(section, 'content', null)) || _.get(section, 'actions', null))) {
              has_text = true;
         }
-        if ((_.get(section, 'image', null) || _.get(section, 'video_embed_html', null))) {
+        if ((_.get(section, 'image', null) || _.get(section, 'video_embed_html', null) ||  _.get(section, 'file', null) )) {
              has_media = true;
         }
         if (((has_media === false) || (has_text === false))) {
@@ -47,9 +47,11 @@ export default class HeroSection extends React.Component {
                 		<div className="hero__content grid items-center">
                 			{has_media && (
                 			<div className={classNames('hero__media', 'my-2', 'cell-12', {'cell-md-5': (is_horiz && has_text) && (media_width === 'fourty'), 'cell-md-6': (is_horiz && has_text) && (media_width === 'fifty'), 'cell-md-7': (is_horiz && has_text) && (media_width === 'sixty')})}>
-                				{_.get(section, 'video_embed_html', null) ? (
-                					htmlToReact(_.get(section, 'video_embed_html', null))
-                				) : 
+                        {_.get(section, 'file', null) ? (
+                          <video autoPlay muted loop>
+                            <source src={_.get(section, 'file', null).url} type="video/mp4"/>
+                          </video>
+                				) :
                 					<img src={withPrefix(_.get(section, 'image', null))} alt={_.get(section, 'image_alt', null)} className={classNames({'mx-auto': align_x === 'center', 'ml-auto': align_x === 'right'})} />
                 				}
                 			</div>

@@ -36,6 +36,13 @@ export default {
             ]
         },
         {
+            "type": "file",
+            "name": "file",
+            "title": "File",
+            "description": "An attached file",
+            "validation": null
+        },
+        {
             "type": "image",
             "name": "image",
             "title": "Image",

@@ -32,6 +32,9 @@ export default class GridItem extends React.Component {
         if ((((_.get(item, 'title', null) || _.get(item, 'subtitle', null)) || _.get(item, 'content', null)) || _.get(item, 'actions', null))) {
              has_text = true;
         }
+        if (_.get(section, 'title', null).includes("Clients")) {
+             has_text = false;
+        }
         if (_.get(item, 'image', null)) {
              has_image = true;
         }
@@ -74,7 +77,7 @@ export default class GridItem extends React.Component {
                 					{_.get(item, 'title', null) && (
                 						_.get(section, 'title', null) ? (
                 						<h3 className={classNames('item__title', {'h3': columns === 'two', 'h4': columns === 'three', 'h5': columns === 'four', 'text-center': title_align_x === 'center', 'text-right': title_align_x === 'right'})}>{_.get(item, 'title', null)}</h3>
-                						) : 
+                						) :
                 						<h2 className={classNames('item__title', {'h3': columns === 'two', 'h4': columns === 'three', 'h5': columns === 'four', 'text-center': title_align_x === 'center', 'text-right': title_align_x === 'right'})}>{_.get(item, 'title', null)}</h2>
                 					)}
                 					{_.get(item, 'subtitle', null) && (
