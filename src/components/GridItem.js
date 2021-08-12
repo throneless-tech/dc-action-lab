@@ -32,7 +32,7 @@ export default class GridItem extends React.Component {
         if ((((_.get(item, 'title', null) || _.get(item, 'subtitle', null)) || _.get(item, 'content', null)) || _.get(item, 'actions', null))) {
              has_text = true;
         }
-        if (_.get(section, 'title', null).includes("Clients")) {
+        if (_.get(section, 'title', null) && _.get(section, 'title', null).includes("Clients")) {
              has_text = false;
         }
         if (_.get(item, 'image', null)) {
