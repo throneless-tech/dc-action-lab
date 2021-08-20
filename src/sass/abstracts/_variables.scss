@@ -242,6 +242,11 @@ $grid-gap: 1.66667rem !default;
 $grid-gap-small: 1.11111rem !default;
 $grid-gap-large: 2.22222rem !default;
 
+body {
+ font-family: 'Work Sans', sans-serif;
+ font-weight: 300;
+}
+
 h1, h2, h3, h4, h5, h6 {
  font-family: 'Montserrat', sans-serif;
  font-weight: 900;
