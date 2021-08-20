@@ -31,9 +31,11 @@ class MyDocument extends Document {
     }
 
     render() {
+        console.log("this.helmetHeadComponents", this.helmetHeadComponents)
         return (
             <Html {...this.helmetHtmlAttrComponents}>
-                <Head>{this.helmetHeadComponents}</Head>
+                <Head>{this.helmetHeadComponents}
+                </Head>
                 <body {...this.helmetBodyAttrComponents}>
                     <Main />
                     <ScriptTag src={withPrefix('js/init.js')}/>

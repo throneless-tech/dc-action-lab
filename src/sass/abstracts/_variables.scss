@@ -5,7 +5,7 @@ $theme-styles: (
 	classic: (
 		fonts: (
 			serif: ('Lora', 'Lucida Bright', 'Lucidabright', 'Lucida Serif', Lucida, Georgia, serif),
-			sans-serif: ('Open Sans', Lato, sans-serif)
+			sans-serif: ('Work Sans', sans-serif)
 		),
 		colors: (
 			blue:  #194350,
@@ -241,3 +241,8 @@ $grid-cells: 12 !default;
 $grid-gap: 1.66667rem !default;
 $grid-gap-small: 1.11111rem !default;
 $grid-gap-large: 2.22222rem !default;
+
+h1, h2, h3, h4, h5, h6 {
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 900;
+}
