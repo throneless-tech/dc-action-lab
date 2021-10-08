@@ -38,48 +38,130 @@ export default class HeroSection extends React.Component {
              is_vert = true;
         }
         return (
-            <React.Fragment>
-                <section className={classNames('section', 'hero', {'has-border': _.get(section, 'has_border', null), 'has-cover': _.get(section, 'background_image', null), 'bg-none': bg_color === 'none', 'bg-primary': bg_color === 'primary', 'bg-secondary': bg_color === 'secondary', 'pt-4': padding_top === 'small', 'pt-6': (padding_top === 'medium') || (padding_top === 'large'), 'pt-md-7': padding_top === 'large', 'pb-4': padding_bottom === 'small', 'pb-6': (padding_bottom === 'medium') || (padding_bottom === 'large'), 'pb-md-7': padding_bottom === 'large'})}>
-                	{_.get(section, 'background_image', null) && (
-                	<div className="cover-img" style={toStyleObj('background-image: url(\'' + withPrefix(_.get(section, 'background_image', null)) + '\'); opacity: ' + bg_img_opacity + '; background-size: ' + bg_img_size + '; background-repeat: ' + bg_img_repeat + '; background-position: ' + bg_img_position)}/>
-                	)}
-                	<div className={classNames('container', {'container--medium': is_vert})}>
-                		<div className="hero__content grid items-center">
-                			{has_media && (
-                			<div className={classNames('hero__media', 'my-2', 'cell-12', {'cell-md-5': (is_horiz && has_text) && (media_width === 'fourty'), 'cell-md-6': (is_horiz && has_text) && (media_width === 'fifty'), 'cell-md-7': (is_horiz && has_text) && (media_width === 'sixty')})}>
-                        {_.get(section, 'file', null) ? (
-                          <video autoPlay muted loop>
-                            <source src={_.get(section, 'file', null).url} type="video/mp4"/>
-                          </video>
-                				) :
-                					<img src={withPrefix(_.get(section, 'image', null))} alt={_.get(section, 'image_alt', null)} className={classNames({'mx-auto': align_x === 'center', 'ml-auto': align_x === 'right'})} />
-                				}
-                			</div>
-                			)}
-                			{has_text && (
-                			<div className={classNames('hero__body', 'my-2', 'cell-12', {'cell-md-7': (is_horiz && has_media) && (media_width === 'fourty'), 'cell-md-6': (is_horiz && has_media) && (media_width === 'fifty'), 'cell-md-5': (is_horiz && has_media) && (media_width === 'sixty'), 'order-md-first': has_media && (media_pos === 'right'), 'order-first': has_media && (media_pos === 'bottom'), 'text-center': align_x === 'center', 'text-right': align_x === 'right'})}>
-                				{_.get(section, 'title', null) && (
-                				<h2 className="hero__title">{_.get(section, 'title', null)}</h2>
-                				)}
-                				{_.get(section, 'subtitle', null) && (
-                				<p className="hero__title">{_.get(section, 'subtitle', null)}</p>
-                				)}
-                				{_.get(section, 'content', null) && (
-                				<div className="hero__copy">
-                					{markdownify(_.get(section, 'content', null))}
-                				</div>
-                				)}
-                				{_.get(section, 'actions', null) && (
-                				<div className={classNames('hero__actions', 'btn-group', {'justify-center': align_x === 'center', 'justify-end': align_x === 'right'})}>
-                					<SectionActions {...this.props} actions={_.get(section, 'actions', null)} />
-                				</div>
-                				)}
-                			</div>
-                			)}
-                		</div>
-                	</div>
-                </section>
-            </React.Fragment>
+          <React.Fragment>
+            <section
+              className={classNames("section", "hero", {
+                "has-border": _.get(section, "has_border", null),
+                "has-cover": _.get(section, "background_image", null),
+                "bg-none": bg_color === "none",
+                "bg-primary": bg_color === "primary",
+                "bg-secondary": bg_color === "secondary",
+                "pt-4": padding_top === "small",
+                "pt-6": padding_top === "medium" || padding_top === "large",
+                "pt-md-7": padding_top === "large",
+                "pb-4": padding_bottom === "small",
+                "pb-6":
+                  padding_bottom === "medium" || padding_bottom === "large",
+                "pb-md-7": padding_bottom === "large",
+              })}
+            >
+              {_.get(section, "background_image", null) && (
+                <div
+                  className="cover-img"
+                  style={toStyleObj(
+                    "background-image: url('" +
+                      withPrefix(_.get(section, "background_image", null)) +
+                      "'); opacity: " +
+                      bg_img_opacity +
+                      "; background-size: " +
+                      bg_img_size +
+                      "; background-repeat: " +
+                      bg_img_repeat +
+                      "; background-position: " +
+                      bg_img_position
+                  )}
+                />
+              )}
+              <div
+                className={classNames("container", {
+                  "container--medium": is_vert,
+                })}
+              >
+                <div className="hero__content grid items-center">
+                  {has_media && (
+                    <div
+                      className={classNames("hero__media", "my-2", "cell-12", {
+                        "cell-md-5":
+                          is_horiz && has_text && media_width === "fourty",
+                        "cell-md-6":
+                          is_horiz && has_text && media_width === "fifty",
+                        "cell-md-7":
+                          is_horiz && has_text && media_width === "sixty",
+                      })}
+                    >
+                      {_.get(section, "file", null) ? (
+                        <video autoPlay muted loop>
+                          <source
+                            src={_.get(section, "file", null).url}
+                            type="video/mp4"
+                          />
+                        </video>
+                      ) : (
+                        <img
+                          src={withPrefix(_.get(section, "image", null))}
+                          alt={_.get(section, "image_alt", null)}
+                          className={classNames({
+                            "mx-auto": align_x === "center",
+                            "ml-auto": align_x === "right",
+                          })}
+                        />
+                      )}
+                    </div>
+                  )}
+                  {has_text && (
+                    <div
+                      className={classNames("hero__body", "my-2", "cell-12", {
+                        "cell-md-7":
+                          is_horiz && has_media && media_width === "fourty",
+                        "cell-md-6":
+                          is_horiz && has_media && media_width === "fifty",
+                        "cell-md-5":
+                          is_horiz && has_media && media_width === "sixty",
+                        "order-md-first": has_media && media_pos === "right",
+                        "order-first": has_media && media_pos === "bottom",
+                        "text-center": align_x === "center",
+                        "text-right": align_x === "right",
+                      })}
+                    >
+                      {_.get(section, "title", null) && (
+                        <h2 className="hero__title">
+                          {_.get(section, "title", null)}
+                        </h2>
+                      )}
+                      {_.get(section, "secondTitle", null) && (
+                        <h2 className="hero__title">
+                          {_.get(section, "secondTitle", null)}
+                        </h2>
+                      )}
+                      {_.get(section, "subtitle", null) && (
+                        <p className="hero__title">
+                          {_.get(section, "subtitle", null)}
+                        </p>
+                      )}
+                      {_.get(section, "content", null) && (
+                        <div className="hero__copy">
+                          {markdownify(_.get(section, "content", null))}
+                        </div>
+                      )}
+                      {_.get(section, "actions", null) && (
+                        <div
+                          className={classNames("hero__actions", "btn-group", {
+                            "justify-center": align_x === "center",
+                            "justify-end": align_x === "right",
+                          })}
+                        >
+                          <SectionActions
+                            {...this.props}
+                            actions={_.get(section, "actions", null)}
+                          />
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </section>
+          </React.Fragment>
         );
     }
 }
