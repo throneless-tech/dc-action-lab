@@ -76,7 +76,6 @@ export default function FormSection(props) {
       body: encode({ "form-name": "contact-form", ...formData }),
     })
       .then((response) => {
-        console.log("response,", response);
         router.push("/thank-you");
       })
       .catch((error) => {
