@@ -1,6 +1,7 @@
 import React from "react";
 import _ from "lodash";
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/router";
 
 import { classNames, toStyleObj, withPrefix, markdownify } from "../utils";
 
@@ -51,6 +52,7 @@ export default function FormSection(props) {
     form_is_inline = true;
   }
 
+  const router = useRouter();
   // form submission
   const {
     register,
@@ -58,8 +60,29 @@ export default function FormSection(props) {
     formState: { errors },
   } = useForm();
 
-  let onSubmit = (data) => {
-    console.log("submitting form", data);
+  // Transforms the form data from the React Hook Form output to a format Netlify can read
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
+  let onSubmit = (formData, event) => {
+    fetch(`/`, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact-form", ...formData }),
+    })
+      .then((response) => {
+        console.log("response,", response);
+        router.push("/thank-you");
+      })
+      .catch((error) => {
+        alert("Failed to submit contact form, please try again.", error)
+      });
+    event.preventDefault();
   };
 
   return (

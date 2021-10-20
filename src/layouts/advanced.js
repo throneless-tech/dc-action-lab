@@ -7,13 +7,23 @@ export default class Advanced extends React.Component {
     render() {
         return (
             <Layout {...this.props}>
-            {_.map(_.get(this.props, 'page.sections', null), (section, section_idx) => {
-                let component = _.upperFirst(_.camelCase(_.get(section, 'type', null)));
-                let Component = components[component];
-                return (
-                  <Component key={section_idx} {...this.props} section={section} site={this.props} />
-                )
-            })}
+              {_.map(
+                _.get(this.props, "page.sections", null),
+                (section, section_idx) => {
+                  let component = _.upperFirst(
+                    _.camelCase(_.get(section, "type", null))
+                  );
+                  let Component = components[component];
+                  return (
+                    <Component
+                      key={section_idx}
+                      {...this.props}
+                      section={section}
+                      site={this.props}
+                    />
+                  );
+                }
+              )}
             </Layout>
         );
     }

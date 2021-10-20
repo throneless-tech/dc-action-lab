@@ -2,7 +2,6 @@ import React from "react";
 import _ from "lodash";
 import { useForm } from "react-hook-form";
 
-
 export default function FormField(props) {
 	const { register } = useForm();
 
