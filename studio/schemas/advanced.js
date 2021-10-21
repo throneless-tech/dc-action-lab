@@ -26,9 +26,9 @@ export default {
                 {
                     "type": "grid_section"
                 },
-                {
-                    "type": "blog_feed_section"
-                },
+                // {
+                //     "type": "blog_feed_section"
+                // },
                 {
                     "type": "cta_section"
                 },

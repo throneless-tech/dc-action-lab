@@ -13,6 +13,7 @@ import category from './category.js';
 import tag from './tag.js';
 import page from './page.js';
 import post from './post.js';
+import contact from './contact.js'
 import advanced from './advanced.js';
 import hero_section from './hero_section.js';
 import features_section from './features_section.js';
@@ -35,18 +36,19 @@ export default createSchema({
   types: schemaTypes.concat([
     /* Your types here! */
     config,
+    contact,
     header,
     footer,
-    person,
-    category,
-    tag,
+    // person,
+    // category,
+    // tag,
     page,
-    post,
+    // post,
     advanced,
     hero_section,
     features_section,
     grid_section,
-    blog_feed_section,
+    // blog_feed_section,
     cta_section,
     form_section,
     feature,

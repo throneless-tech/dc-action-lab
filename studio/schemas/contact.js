@@ -1,6 +1,6 @@
 export default {
   name: "contact",
-  title: "Contact submissions",
+  title: "Contact form submissions",
   type: "document",
   fields: [
     {
