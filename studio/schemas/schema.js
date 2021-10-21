@@ -42,7 +42,7 @@ export default createSchema({
     // person,
     // category,
     // tag,
-    page,
+    // page,
     // post,
     advanced,
     hero_section,
