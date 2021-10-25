@@ -1,3 +1,4 @@
 [build]
 publish = "out"
 command = "./stackbit-build.sh"
+functions = "functions/"
