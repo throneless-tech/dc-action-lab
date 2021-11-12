@@ -34,6 +34,9 @@ export default {
                 },
                 {
                     "type": "form_section"
+                },
+                {
+                    "type": "carousel"
                 }
             ]
         },

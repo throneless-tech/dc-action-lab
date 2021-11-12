@@ -13,6 +13,7 @@ import category from './category.js';
 import tag from './tag.js';
 import page from './page.js';
 import post from './post.js';
+import carousel from './carousel.js'
 import contact from './contact.js'
 import advanced from './advanced.js';
 import hero_section from './hero_section.js';
@@ -35,6 +36,7 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     /* Your types here! */
+    carousel,
     config,
     contact,
     header,

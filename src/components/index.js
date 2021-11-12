@@ -7,6 +7,7 @@ import BlogPostCategories from './BlogPostCategories';
 import BlogPostFeedItem from './BlogPostFeedItem';
 import BlogPostTags from './BlogPostTags';
 import CtaSection from './CtaSection';
+import Carousel from './Carousel';
 import Feature from './Feature';
 import FeaturesSection from './FeaturesSection';
 import Footer from './Footer';
@@ -31,6 +32,7 @@ export {
     BlogPostCategories,
     BlogPostFeedItem,
     BlogPostTags,
+    Carousel,
     CtaSection,
     Feature,
     FeaturesSection,
@@ -57,6 +59,7 @@ export default {
     BlogPostCategories,
     BlogPostFeedItem,
     BlogPostTags,
+    Carousel,
     CtaSection,
     Feature,
     FeaturesSection,
