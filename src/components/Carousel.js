@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { classNames, htmlToReact, withPrefix, markdownify } from "../utils";
+import { classNames } from "../utils";
 
 export default function Carousel(props) {
   const settings = {
@@ -15,8 +15,6 @@ export default function Carousel(props) {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-
-  console.log("PROPS AT CAROUSEL", props.section)
 
   let section = _.get(props, "section", null);
 
